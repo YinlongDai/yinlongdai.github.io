@@ -96,15 +96,11 @@ h2 {
   font-size: 22px;
 }
 
-h3 {
-  font-weight: 700;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 20px;
-}
 
 .mediatitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .papertitle {
