@@ -108,7 +108,7 @@ h2 {
 .badge-container {
   position: fixed;
   top: 30%; /* Adjust this value to position the badge vertically */
-  left: 0; /* Change to 'left' if you want it on the left side */
+  right: 0; /* Change to 'left' if you want it on the left side */
   transform: translateY(-50%);
   z-index: 1000; /* Ensure it appears above other content */
   padding: 10px;
