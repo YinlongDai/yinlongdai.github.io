@@ -111,7 +111,7 @@ h2 {
   right: 0; /* Change to 'left' if you want it on the left side */
   transform: translateY(-50%);
   z-index: 1000; /* Ensure it appears above other content */
-  padding: 10px;
+  padding: 70px;
   background-color: #fff; /* Optional: add a background color */
   box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: add some shadow for better visibility */
 }
