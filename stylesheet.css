@@ -134,6 +134,13 @@ h2 {
   text-decoration: underline;
 }
 
+/* Hide badges on mobile */
+@media (max-width: 600px) {
+  .badge-container {
+      display: none;
+  }
+}
+
 .mediatitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 18px;
