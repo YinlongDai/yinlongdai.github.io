@@ -127,6 +127,12 @@ h2 {
   font-weight: 700;
 }
 
+.booktitle {
+  font-family: 'Noto Sans', Verdana, Helvetica, sans-serif;
+  font-size: 17px;
+  font-style: italic;
+}
+
 .name {
   padding-top: 20px;
   margin: 0;
