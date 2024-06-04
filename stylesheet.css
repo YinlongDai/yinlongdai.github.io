@@ -74,13 +74,22 @@ a:hover {
   text-decoration: none;
 }
 
-body,
+/* body,
 td,
 th,
 tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 18px;
+} */
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Noto Sans', Verdana, Helvetica, sans-serif;
   font-size: 18px;
 }
 
