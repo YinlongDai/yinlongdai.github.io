@@ -117,6 +117,23 @@ h2 {
   /* Optional: add some shadow for better visibility */
 }
 
+.custom-twitter-badge img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.custom-twitter-badge a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.custom-twitter-badge a:hover {
+  text-decoration: underline;
+}
+
 .mediatitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 18px;
