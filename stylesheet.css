@@ -175,7 +175,7 @@ body {
 }
 
 .github-stats-badge {
-  width: 220px; /* Adjust the width as needed */
+  width: 400px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
   margin-right: 20px; /* Move it further from the edge if needed */
   border-radius: 20px;
