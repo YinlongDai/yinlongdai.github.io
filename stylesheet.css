@@ -124,7 +124,7 @@ body {
 
 @media (min-width: 600px) and (max-width: 1200px) {
   .main-content {
-      padding-right: 200px; /* Adjust this value based on badge width */
+      padding-right: 300px; /* Adjust this value based on badge width */
   }
 }
 
@@ -149,9 +149,9 @@ body {
 .custom-twitter-badge {
   display: flex;
   align-items: center;
-  background-color: #1DA1F2;
+  background-color: #333333;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
