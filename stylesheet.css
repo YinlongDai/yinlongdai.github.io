@@ -119,7 +119,7 @@ body {
 
 .main-content {
   flex: 1;
-  padding-right: 100px; /* Adjust this value based on badge width */
+  padding-right: 200px; /* Adjust this value based on badge width */
   box-sizing: border-box;
 }
 
