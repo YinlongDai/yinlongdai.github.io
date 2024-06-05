@@ -175,11 +175,11 @@ body {
 }
 
 .github-stats-badge {
-  width: 400px; /* Adjust the width as needed */
+  width: 300px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
   margin-right: 20px; /* Move it further from the edge if needed */
   border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
 
