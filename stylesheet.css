@@ -119,8 +119,13 @@ body {
 
 .main-content {
   flex: 1;
-  padding-right: 200px; /* Adjust this value based on badge width */
   box-sizing: border-box;
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .main-content {
+      padding-right: 200px; /* Adjust this value based on badge width */
+  }
 }
 
 .badge-container {
@@ -146,7 +151,7 @@ body {
   align-items: center;
   background-color: #1DA1F2;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
 }
@@ -169,15 +174,14 @@ body {
   text-decoration: underline;
 }
 
+
+
 /* Hide badges on mobile and remove padding */
 @media (max-width: 600px) {
   .badge-container {
       display: none;
   }
 
-  .main-content {
-      padding-right: 0;
-  }
 }
 
 
