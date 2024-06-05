@@ -174,6 +174,13 @@ body {
   text-decoration: underline;
 }
 
+.github-stats-badge {
+  width: 220px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Move it further from the edge if needed */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 
 /* Hide badges on mobile and remove padding */
@@ -183,50 +190,6 @@ body {
   }
 
 }
-
-
-
-
-
-
-
-
-
-/* .badge-container {
-  position: fixed;
-  top: 30%; 
-  right: 0; 
-  transform: translateY(-50%);
-  z-index: 1000; 
-  padding: 10px;
-  background-color: #fff; 
-}
-
-.custom-twitter-badge img {
-  width: 48px;
-  height: 48px;
-  margin-right: 10px;
-  border-radius: 15px;
-}
-
-.custom-twitter-badge a {
-  color: #555;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.custom-twitter-badge a:hover {
-  text-decoration: underline;
-}
-
-
-@media (max-width: 600px) {
-  .badge-container {
-      display: none;
-  }
-} */
-
 
 
 
