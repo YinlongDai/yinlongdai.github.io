@@ -154,13 +154,13 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
-  margin-right: 22px;
+  margin-right: 20px;
 }
 
 .custom-twitter-badge img {
   width: 48px;
   height: 48px;
-  margin-right: 50px;
+  margin-right: 58px;
   border-radius: 40%; /* This makes the corners round */
 }
 
