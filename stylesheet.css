@@ -122,9 +122,9 @@ body {
   box-sizing: border-box;
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
+@media (min-width: 800px) and (max-width: 1200px) {
   .main-content {
-      padding-right: 300px; /* Adjust this value based on badge width */
+      padding-right: 350px; /* Adjust this value based on badge width */
   }
 }
 
@@ -154,6 +154,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
+  width: 250px; /* Adjust the width as needed */
 }
 
 .custom-twitter-badge img {
@@ -177,7 +178,7 @@ body {
 
 
 /* Hide badges on mobile and remove padding */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .badge-container {
       display: none;
   }
