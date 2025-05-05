@@ -86,9 +86,7 @@
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2><img src="images/favicon/paper.ico" width=60 height=60 alt="News Icon" style="vertical-align:middle; margin-right:5px;">&nbsp;Logs</h2>
-                <!-- <p>
-                  2024.5&nbsp;&nbsp;&nbsp;I graduated from New York University. 
-                </p> -->
+
                 <ul>
                   <li>2024.5&nbsp;&nbsp;&nbsp;🎓I graduated from New York University. </li>
                 </ul>
@@ -108,6 +106,54 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <tr onmouseout="civil_stop()" onmouseover="civil_start()">
+      <td style="width:10%;vertical-align:middle;">
+        <div class="one" style="margin-top: 30px;">
+          <div class="two" id='civil_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
+          <source src="images/CIVIL.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
+          <img src='images/CIVIL_website.png' width=216 height=122 style="padding-top: 0px; border-radius: 15px;">
+        </div>
+        <script type="text/javascript">
+          function civil_start() {
+            document.getElementById('civil_image').style.opacity = "1";
+          }
+
+          function civil_stop() {
+            document.getElementById('civil_image').style.opacity = "0";
+          }
+          civil_stop()
+        </script>
+      </td>
+      <td style="width:100%;padding:60px;vertical-align:top">
+        <a href="https://civil2025.github.io/">
+      <span class="papertitle">CIVIL: Causal and Intuitive Visual Imitation Learning
+</span>
+        </a>
+        <br>
+        <strong>Yinlong Dai *</strong>,
+        <a href="">Robert Ramirez Sanchez *</a>, 
+        <a href="https://www.linkedin.com/in/ryan-jeronimus-6aa4962aa/"> Ryan Jeronimus</a>,
+        <a href="https://www.sagheb.net/">Shahabedin Sagheb</a>,
+        <a href="https://robotics.cornell.edu/faculty/cara-m-nunez/">Cara M. Nunez</a>,
+        <a href="https://herambnemlekar.github.io/">Heramb Nemlekar</a>,
+        <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+
+        <br>
+        <em>Under Review</em>, 2025
+        <br>
+        <a href="https://github.com/CIVIL2025/Implementation">project code</a>
+        /
+        <a href="https://arxiv.org/abs/2504.17959">arXiv</a>
+        <p></p>
+        <p style="margin: -15px 0;">
+          A framework designed to enable real robots to learn from multimodal visual-language instruction data using imitation learning.
+        </p>
+      </td>
+    </tr>
 
     <tr onmouseout="hudor_stop()" onmouseover="hudor_start()">
       <td style="width:10%;vertical-align:middle;">
@@ -143,7 +189,7 @@
         <a href="https://www.lerrelpinto.com/">Lerrel Pinto</a>
 
         <br>
-        <em>Under Review</em>, 2024
+        <em>ICRA</em>, 2025
         <br>
         <!-- <a href="https://github.com/aadhithya14/Open-Teach">project code</a>
         / -->
