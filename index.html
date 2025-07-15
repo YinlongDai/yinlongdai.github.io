@@ -60,17 +60,25 @@
       <script>
         async function loadScholarData() {
           try {
-            const response = await fetch('https://serpapi.com/search.json?engine=google_scholar_author&author_id=P7EJCgEAAAAJ&api_key=7533eda589fa09a1ef6cf9335a89e7eab125a71671ceb0038e1770a5cc3fee98Y');
+            console.log("🔍 Sending request to SerpApi...");
+
+            const response = await fetch('https://serpapi.com/search.json?engine=google_scholar_author&author_id=P7EJCgEAAAAJ&api_key=YOUR_API_KEY');
+            console.log("✅ Response status:", response.status);
+
             const data = await response.json();
+            console.log("📦 Received JSON:", data);
 
             const table = data?.cited_by?.table;
+            console.log("📊 Extracted 'cited_by.table':", table);
+
             const citations = table?.[0]?.citations?.all ?? 'N/A';
             const hIndex = table?.[1]?.h_index?.all ?? 'N/A';
+            console.log("✅ Parsed citations:", citations, "h-index:", hIndex);
 
             const scholarSpan = document.getElementById('scholar-info');
             scholarSpan.textContent = `Citations: ${citations} | h-index: ${hIndex}`;
           } catch (error) {
-            console.error('Failed to load Scholar data:', error);
+            console.error('❌ Failed to load Scholar data:', error);
             const scholarSpan = document.getElementById('scholar-info');
             scholarSpan.textContent = 'Citation info unavailable';
           }
