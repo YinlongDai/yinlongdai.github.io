@@ -51,6 +51,32 @@
         src="https://github-readme-stats.vercel.app/api/pin/?username=YinlongDai&repo=Web_Video2Text&theme=tokyonight&show_owner=true&hide_border=true" 
         alt="Pinned Repo: Web_Video2Text"  />
       </a>
+      <div class="custom-scholar-badge">
+        <a href="https://scholar.google.com/citations?user=P7EJCgEAAAAJ" target="_blank">
+          <img src="images/favicon/google_scholar.ico" width="40" height="40" alt="Google Scholar Icon">
+          <span id="scholar-info">Loading citation info...</span>
+        </a>
+      </div>
+      <script>
+        async function loadScholarData() {
+          try {
+            const response = await fetch('https://serpapi.com/search.json?engine=google_scholar_author&author_id=P7EJCgEAAAAJ&api_key=7533eda589fa09a1ef6cf9335a89e7eab125a71671ceb0038e1770a5cc3fee98Y');
+            const data = await response.json();
+
+            const table = data?.cited_by?.table;
+            const citations = table?.[0]?.citations?.all ?? 'N/A';
+            const hIndex = table?.[1]?.h_index?.all ?? 'N/A';
+
+            const scholarSpan = document.getElementById('scholar-info');
+            scholarSpan.textContent = `Citations: ${citations} | h-index: ${hIndex}`;
+          } catch (error) {
+            console.error('Failed to load Scholar data:', error);
+            const scholarSpan = document.getElementById('scholar-info');
+            scholarSpan.textContent = 'Citation info unavailable';
+          }
+        }
+        loadScholarData();
+      </script>
     </div>
     
     <div class="main-content">
