@@ -151,6 +151,53 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+        <tr onmouseout="ReSET_stop()" onmouseover="ReSET_start()">
+      <td style="width:10%;vertical-align:middle;">
+        <div class="one" style="margin-top: 30px;">
+          <div class="two" id='reset_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
+          <source src="images/ReSET_block.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
+          <img src='images/ReSET_block.jpg' width=216 height=122 style="padding-top: 0px; border-radius: 15px;">
+        </div>
+        <script type="text/javascript">
+          function ReSET_start() {
+            document.getElementById('reset_image').style.opacity = "1";
+          }
+
+          function ReSET_stop() {
+            document.getElementById('reset_image').style.opacity = "0";
+          }
+          ReSET_stop()
+        </script>
+      </td>
+      <td style="width:100%;padding:60px;vertical-align:top">
+        <a href="https://reset2025paper.github.io/">
+      <span class="papertitle">Prepare Before You Act:
+Learning From Humans to Rearrange Initial States
+        </a>
+        <br>
+        <strong>Yinlong Dai</strong>,
+        <a href="https://www.linkedin.com/in/andre-keyser-560090380/">Andre Keyser</a>, 
+        <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+
+        <br>
+        <em>Under Review</em>, 2025
+        <br>
+        <!-- <a href="https://github.com/CIVIL2025/Implementation">project code</a>
+        / -->
+        <a href="https://arxiv.org/abs/2509.18043">arXiv</a>
+        <p></p>
+        <p style="margin: -15px 0;">
+        In this work, we present ReSET, a framework that learns to restructure the environment,
+bringing diverse start states into a familiar and
+manageable distribution before executing the actual task.
+        </p>
+      </td>
+    </tr>
+
+
         <tr onmouseout="civil_stop()" onmouseover="civil_start()">
       <td style="width:10%;vertical-align:middle;">
         <div class="one" style="margin-top: 30px;">
@@ -179,7 +226,7 @@
         </a>
         <br>
         <strong>Yinlong Dai *</strong>,
-        <a href="">Robert Ramirez Sanchez *</a>, 
+        <a href="https://www.linkedin.com/in/robertjrs/">Robert Ramirez Sanchez *</a>, 
         <a href="https://www.linkedin.com/in/ryan-jeronimus-6aa4962aa/"> Ryan Jeronimus</a>,
         <a href="https://www.sagheb.net/">Shahabedin Sagheb</a>,
         <a href="https://robotics.cornell.edu/faculty/cara-m-nunez/">Cara M. Nunez</a>,
