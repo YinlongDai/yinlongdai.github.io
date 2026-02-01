@@ -275,6 +275,47 @@ body {
   font-weight: 900;
 }
 
+/* Intro card next to profile photo */
+.intro-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 35px; /* match profile image radius */
+  padding: 22px 26px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.intro-card .name {
+  padding-top: 0;
+}
+
+/* Reusable section card (Logs / Reading / etc.) */
+.section-card {
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 35px; /* match profile image radius */
+  padding: 18px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Keep section titles aligned nicely inside cards */
+.section-card h2 {
+  margin-top: 0;
+}
+
+/* Make Logs header less eye-catching */
+.logs-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.35em;
+  font-weight: 600;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.logs-title-icon {
+  display: block;
+  opacity: 0.55;
+}
+
 .motto{
   font-family: 'Georgia', 'Times New Roman', Times, serif;
   font-size: 1.0em;
