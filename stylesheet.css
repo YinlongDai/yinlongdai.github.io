@@ -116,7 +116,41 @@ body {
   padding: 0;
   display: flex;
   position: relative;
-  background: #ffffff; /* keep site light by default */
+  background: #ffffff; /* light theme default */
+  color: rgba(0, 0, 0, 0.88);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1200;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-1px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
+
+.theme-toggle-icon {
+  font-size: 18px;
+  line-height: 1;
 }
 
 .main-content {
@@ -185,12 +219,8 @@ body {
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
-  /* Dark mode adjustments */
-@media (prefers-color-scheme: dark) {
-  .github-stats-badge {
-      filter: invert(1) hue-rotate(180deg); /* Adjust filter as needed */
-  }
-}
+/* Dark mode adjustments */
+
 
 
 /* Hide badges on mobile and remove padding */
@@ -281,6 +311,7 @@ body {
   border-radius: 35px; /* match profile image radius */
   padding: 22px 26px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.00);
 }
 
 .intro-card .name {
@@ -293,6 +324,7 @@ body {
   border-radius: 35px; /* match profile image radius */
   padding: 18px 22px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.00);
 }
 
 /* Keep section titles aligned nicely inside cards */
@@ -408,4 +440,67 @@ span.highlight {
   text-decoration: none;
   color: inherit;
   font-weight: bold;
+}
+
+
+
+
+/************** THEME SYSTEM **************/
+
+/* =========================
+   Manual theme switching
+   - default set by JS to match browser preference
+   - user choice stored in localStorage
+   ========================= */
+
+html[data-theme="dark"] body {
+  background: #0f1115;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+html[data-theme="dark"] a { color: #7ab7ff; }
+html[data-theme="dark"] a:focus,
+html[data-theme="dark"] a:hover { color: #ffd08a; }
+
+html[data-theme="dark"] .ambient-bg {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(60, 160, 190, 0.22), rgba(15, 17, 21, 0) 55%),
+    radial-gradient(circle at 85% 20%, rgba(150, 110, 200, 0.18), rgba(15, 17, 21, 0) 60%),
+    radial-gradient(circle at 25% 80%, rgba(80, 180, 150, 0.14), rgba(15, 17, 21, 0) 60%),
+    radial-gradient(circle at 70% 85%, rgba(240, 170, 90, 0.16), rgba(15, 17, 21, 0) 62%),
+    linear-gradient(180deg, #0f1115 0%, #0f1115 100%);
+}
+
+html[data-theme="dark"] .intro-card,
+html[data-theme="dark"] .section-card {
+  background: rgba(22, 25, 33, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow:
+    0 12px 34px rgba(0, 0, 0, 0.55),
+    0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+
+html[data-theme="dark"] .motto { color: rgba(255, 255, 255, 0.72); }
+html[data-theme="dark"] .papertitle,
+html[data-theme="dark"] .booktitle,
+html[data-theme="dark"] .name,
+html[data-theme="dark"] .mediatitle {
+  color: rgba(255, 255, 255, 0.90);
+}
+
+html[data-theme="dark"] .logs-title-icon { opacity: 0.50; }
+
+html[data-theme="dark"] .theme-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(22, 25, 33, 0.75);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55);
+}
+
+/* Keep toggle away from badge column on wide screens */
+@media (min-width: 1000px) and (max-width: 1400px) {
+  .theme-toggle { right: 330px; }
+}
+
+@media (max-width: 1000px) {
+  .theme-toggle { right: 16px; }
 }

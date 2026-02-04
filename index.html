@@ -30,6 +30,9 @@
               
   <body>
     <div class="ambient-bg" aria-hidden="true"></div>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle color theme">
+      <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+    </button>
 
     <div class="badge-container">
       <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="yinlong-dai-28aa35168" data-version="v1">
@@ -162,6 +165,52 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+        <tr onmouseout="ReSET_stop()" onmouseover="LMP_start()">
+      <td class="paper-thumb-td">
+        <div class="one" style="margin-top: 30px;">
+          <div class="two" id='reset_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
+          <source src="images/LMP_video.mov" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
+          <img src='images/LMP_IMG.png' width=216 height=122 style="padding-top: 0px; border-radius: 15px;">
+        </div>
+        <script type="text/javascript">
+          function LMP_start() {
+            document.getElementById('reset_image').style.opacity = "1";
+          }
+
+          function LMP_stop() {
+            document.getElementById('reset_image').style.opacity = "0";
+          }
+          LMP_stop()
+        </script>
+      </td>
+      <td class="paper-text-td">
+        <a href="https://collab.me.vt.edu/lmp/">
+      <span class="papertitle">Language Movement Primitives: Grounding Language Models in Robot Motion
+        </a>
+        <br>
+        <strong>Yinlong Dai</strong>,
+        <a href="https://github.com/benjaminchristie">Benjamin A. Christie</a>, 
+        <a href="https://linkedin.com/in/daniel-evans-787b7a293">Daniel J. Evans</a>, 
+        <a href="https://dylanlosey.com/">Dylan P. Losey</a>,
+        <a href="https://simonstepputtis.com/">Simon Stepputtis</a>
+
+
+        <br>
+        <em>Under Review</em>, 2026
+        <br>
+        <a href="https://github.com/lmp-26/lmp-26.github.io/tree/code">code</a>
+        /
+        <a href="https://arxiv.org/abs/2602.02839">arXiv</a>
+        <p></p>
+        <p style="margin: -15px 0;">
+          We propose Language Movement Primitives (LMP), a framework  that bridges the gap between high-level reasoning and low-level robotic control through the use of Dynamic Movement Primitives.
+        </p>
+      </td>
+    </tr>
 
         <tr onmouseout="ReSET_stop()" onmouseover="ReSET_start()">
       <td class="paper-thumb-td">
@@ -513,5 +562,48 @@ manageable distribution before executing the actual task.
       </tr>
     </table>
     </div>
-  </body>
+</body>
+  <script>
+    (function () {
+      const STORAGE_KEY = 'site-theme';
+      const btn = document.getElementById('theme-toggle');
+      const icon = btn ? btn.querySelector('.theme-toggle-icon') : null;
+      const media = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        if (icon) icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+      }
+
+      function getPreferredTheme() {
+        return media.matches ? 'dark' : 'light';
+      }
+
+      // Init: default follows browser preference, unless user has an explicit choice
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved === 'light' || saved === 'dark') {
+        applyTheme(saved);
+      } else {
+        applyTheme(getPreferredTheme());
+      }
+
+      // Toggle button: saves explicit preference
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme') || getPreferredTheme();
+          const next = current === 'dark' ? 'light' : 'dark';
+          localStorage.setItem(STORAGE_KEY, next);
+          applyTheme(next);
+        });
+      }
+
+      // If user has NOT chosen explicitly, follow browser changes live
+      media.addEventListener('change', () => {
+        const savedNow = localStorage.getItem(STORAGE_KEY);
+        if (savedNow !== 'light' && savedNow !== 'dark') {
+          applyTheme(getPreferredTheme());
+        }
+      });
+    })();
+  </script>
 </html>
