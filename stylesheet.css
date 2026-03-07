@@ -378,14 +378,14 @@ body {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 250px;
+  height: 141px;
   position: relative;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 250px;
+  height: 141px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -396,13 +396,37 @@ body {
 .paper-thumb-td {
   width: 10%;
   vertical-align: middle;
-  padding-right: 25px;
+  padding-right: 8px;
 }
 
 .paper-text-td {
   width: 100%;
   vertical-align: top;
-  padding: 22px 35px 22px 55px;
+  padding: 22px 35px 22px 30px;
+}
+
+.paper-thumb-td .one,
+.paper-thumb-td .two {
+  width: 250px !important;
+  height: 141px !important;
+}
+
+.paper-thumb-td .two {
+  margin-top: 0 !important;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.paper-thumb-td img,
+.paper-thumb-td video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.paper-thumb-td video {
+  border-radius: 15px !important;
+  display: block;
 }
 
 .fade {
