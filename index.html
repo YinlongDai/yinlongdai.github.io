@@ -167,10 +167,56 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-        <tr onmouseout="ReSET_stop()" onmouseover="LMP_start()">
+        <tr onmouseout="MEMO_stop()" onmouseover="MEMO_start()">
+      <td class="paper-thumb-td">
+        <div class="one" style="margin-top: 30px; width: 216px; height: 122px;">
+          <div class="two" id='memo_image' style="margin-top: 0px; width: 216px; height: 122px; border-radius: 15px; overflow: hidden;"><video muted autoplay loop playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block;">
+          <source src="images/memo_web_video.mov" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
+          <img src='images/memo_web_pic.png' width=216 height=122 style="padding-top: 0px; border-radius: 15px; object-fit: cover; object-position: center 40%; width: 216px; height: 122px; display: block;">
+        </div>
+        <script type="text/javascript">
+          function MEMO_start() {
+            document.getElementById('memo_image').style.opacity = "1";
+          }
+
+          function MEMO_stop() {
+            document.getElementById('memo_image').style.opacity = "0";
+          }
+          MEMO_stop()
+        </script>
+      </td>
+      <td class="paper-text-td">
+        <a href="https://collab.me.vt.edu/memo/">
+      <span class="papertitle">From Local Corrections to Generalized Skills: Improving Neuro-Symbolic Policies with MEMO
+        </a>
+        <br>
+        <a href="https://github.com/benjaminchristie">Benjamin A. Christie</a>, 
+        <strong>Yinlong Dai</strong>,
+        <a href="https://scholar.google.com/citations?user=0jGWGdsAAAAJ">Mohammad Bararjanianbahnamiri</a>,
+        <a href="https://simonstepputtis.com/">Simon Stepputtis</a>,
+        <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+
+
+        <br>
+        <em>Under Review</em>, 2026
+        <br>
+        <a href="https://github.com/VT-Collab/memo/">code</a>
+        /
+        <a href="https://arxiv.org/abs/2603.04560">arXiv</a>
+        <p></p>
+        <p style="margin: -15px 0;">
+          By aggregating natural language corrections from multiple users across multiple tasks into a skillbook, we create and refine a continuously evolving set of generalized skills, leading to improvements beyond the corrected tasks.
+        </p>
+      </td>
+    </tr>
+
+        <tr onmouseout="LMP_stop()" onmouseover="LMP_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
-          <div class="two" id='reset_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
+          <div class="two" id='lmp_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
           <source src="images/LMP_video.mov" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
@@ -179,11 +225,11 @@
         </div>
         <script type="text/javascript">
           function LMP_start() {
-            document.getElementById('reset_image').style.opacity = "1";
+            document.getElementById('lmp_image').style.opacity = "1";
           }
 
           function LMP_stop() {
-            document.getElementById('reset_image').style.opacity = "0";
+            document.getElementById('lmp_image').style.opacity = "0";
           }
           LMP_stop()
         </script>
