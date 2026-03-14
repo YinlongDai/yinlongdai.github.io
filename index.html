@@ -3,8 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="google-site-verification" content="zvdBx0kk5EUu49MvJ3FcyfKiN3VB1PTG04WpIRsbOPI" />
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- Social widget scripts are loaded lazily in the footer script (desktop only). -->
     <!-- <style>
       .badge-container {
           position: fixed;
@@ -98,7 +97,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr style="padding:0px">
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/Generated_Image.jpeg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 35px;" alt="profile photo" src="images/Generated_Image.jpeg" class="hoverZoomLink"></a>
+                <a href="images/Generated_Image.jpeg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 35px;" alt="profile photo" src="images/Generated_Image.jpeg" class="hoverZoomLink" loading="eager" decoding="async" fetchpriority="high"></a>
                 <p class="motto">"A worshiper of science, <br> a slave to freedom."</p>
               </td>
               <td style="padding:2.5%;width:63%;vertical-align:middle">
@@ -170,8 +169,8 @@
         <tr onmouseout="MEMO_stop()" onmouseover="MEMO_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px; width: 216px; height: 122px;">
-          <div class="two" id='memo_image' style="margin-top: 0px; width: 216px; height: 122px; border-radius: 15px; overflow: hidden;"><video muted autoplay loop playsinline style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block;">
-          <source src="images/memo_web_video.mov" type="video/mp4">
+          <div class="two" id='memo_image' style="margin-top: 0px; width: 216px; height: 122px; border-radius: 15px; overflow: hidden;"><video id="memo_video" class="js-preview-video" muted loop playsinline preload="none" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block;">
+          <source data-src="images/memo_web_video.mov" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
           <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
@@ -179,11 +178,11 @@
         </div>
         <script type="text/javascript">
           function MEMO_start() {
-            document.getElementById('memo_image').style.opacity = "1";
+            setPreviewState('memo_image', 'memo_video', true);
           }
 
           function MEMO_stop() {
-            document.getElementById('memo_image').style.opacity = "0";
+            setPreviewState('memo_image', 'memo_video', false);
           }
           MEMO_stop()
         </script>
@@ -216,8 +215,8 @@
         <tr onmouseout="LMP_stop()" onmouseover="LMP_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
-          <div class="two" id='lmp_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
-          <source src="images/LMP_video.mov" type="video/mp4">
+          <div class="two" id='lmp_image' style="margin-top: -11px;"><video id="lmp_video" class="js-preview-video" width=135% height=90% muted loop playsinline preload="none" style="border-radius: 45px; overflow: hidden;">
+          <source data-src="images/LMP_video.mov" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
           <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
@@ -225,11 +224,11 @@
         </div>
         <script type="text/javascript">
           function LMP_start() {
-            document.getElementById('lmp_image').style.opacity = "1";
+            setPreviewState('lmp_image', 'lmp_video', true);
           }
 
           function LMP_stop() {
-            document.getElementById('lmp_image').style.opacity = "0";
+            setPreviewState('lmp_image', 'lmp_video', false);
           }
           LMP_stop()
         </script>
@@ -262,8 +261,8 @@
         <tr onmouseout="ReSET_stop()" onmouseover="ReSET_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
-          <div class="two" id='reset_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
-          <source src="images/ReSET_block.mp4" type="video/mp4">
+          <div class="two" id='reset_image' style="margin-top: -11px;"><video id="reset_video" class="js-preview-video" width=135% height=90% muted loop playsinline preload="none" style="border-radius: 45px; overflow: hidden;">
+          <source data-src="images/ReSET_block.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
           <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
@@ -271,11 +270,11 @@
         </div>
         <script type="text/javascript">
           function ReSET_start() {
-            document.getElementById('reset_image').style.opacity = "1";
+            setPreviewState('reset_image', 'reset_video', true);
           }
 
           function ReSET_stop() {
-            document.getElementById('reset_image').style.opacity = "0";
+            setPreviewState('reset_image', 'reset_video', false);
           }
           ReSET_stop()
         </script>
@@ -308,8 +307,8 @@ manageable distribution before executing the actual task.
         <tr onmouseout="civil_stop()" onmouseover="civil_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
-          <div class="two" id='civil_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
-          <source src="images/CIVIL.mp4" type="video/mp4">
+          <div class="two" id='civil_image' style="margin-top: -11px;"><video id="civil_video" class="js-preview-video" width=135% height=90% muted loop playsinline preload="none" style="border-radius: 45px; overflow: hidden;">
+          <source data-src="images/CIVIL.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
           <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
@@ -317,11 +316,11 @@ manageable distribution before executing the actual task.
         </div>
         <script type="text/javascript">
           function civil_start() {
-            document.getElementById('civil_image').style.opacity = "1";
+            setPreviewState('civil_image', 'civil_video', true);
           }
 
           function civil_stop() {
-            document.getElementById('civil_image').style.opacity = "0";
+            setPreviewState('civil_image', 'civil_video', false);
           }
           civil_stop()
         </script>
@@ -356,8 +355,8 @@ manageable distribution before executing the actual task.
     <tr onmouseout="hudor_stop()" onmouseover="hudor_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
-          <div class="two" id='hudor_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
-          <source src="images/HuDOR_Dexterity.mp4" type="video/mp4">
+          <div class="two" id='hudor_image' style="margin-top: -11px;"><video id="hudor_video" class="js-preview-video" width=135% height=90% muted loop playsinline preload="none" style="border-radius: 45px; overflow: hidden;">
+          <source data-src="images/HuDOR_Dexterity.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
           <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
@@ -365,11 +364,11 @@ manageable distribution before executing the actual task.
         </div>
         <script type="text/javascript">
           function hudor_start() {
-            document.getElementById('hudor_image').style.opacity = "1";
+            setPreviewState('hudor_image', 'hudor_video', true);
           }
 
           function hudor_stop() {
-            document.getElementById('hudor_image').style.opacity = "0";
+            setPreviewState('hudor_image', 'hudor_video', false);
           }
           hudor_stop()
         </script>
@@ -404,8 +403,8 @@ manageable distribution before executing the actual task.
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
           <!-- <div class="two" id='teach_image' style="margin-top: -33px;"><video  width=135% height=135% muted autoplay loop> -->
-          <div class="two" id='teach_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
-          <source src="images/make_sandwich_8x.mp4" type="video/mp4">
+          <div class="two" id='teach_image' style="margin-top: -11px;"><video id="teach_video" class="js-preview-video" width=135% height=90% muted loop playsinline preload="none" style="border-radius: 45px; overflow: hidden;">
+          <source data-src="images/make_sandwich_8x.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
           <!-- <img src='images/make_sandwich_8x.png' width=216 height=122 style="padding-top: 13.7px;"> -->
@@ -413,11 +412,11 @@ manageable distribution before executing the actual task.
         </div>
         <script type="text/javascript">
           function teach_start() {
-            document.getElementById('teach_image').style.opacity = "1";
+            setPreviewState('teach_image', 'teach_video', true);
           }
 
           function teach_stop() {
-            document.getElementById('teach_image').style.opacity = "0";
+            setPreviewState('teach_image', 'teach_video', false);
           }
           teach_stop()
         </script>
@@ -453,19 +452,19 @@ manageable distribution before executing the actual task.
     <tr onmouseout="plier_stop()" onmouseover="plier_start()">
       <td class="paper-thumb-td">
         <div class="one" style="margin-top: 30px;">
-          <div class="two" id='plier_image' style="margin-top: -11px;"><video  width=135% height=90% muted autoplay loop style="border-radius: 45px; overflow: hidden;">
-          <source src="images/plier_compressed_small.mp4" type="video/mp4" >
+          <div class="two" id='plier_image' style="margin-top: -11px;"><video id="plier_video" class="js-preview-video" width=135% height=90% muted loop playsinline preload="none" style="border-radius: 45px; overflow: hidden;">
+          <source data-src="images/plier_compressed_small.mp4" type="video/mp4" >
           Your browser does not support the video tag.
           </video></div>
           <img src='images/plier_compressed_small.png' width=216 height=122 style="padding-top: 0px; border-radius: 15px;">
         </div>
         <script type="text/javascript">
           function plier_start() {
-            document.getElementById('plier_image').style.opacity = "1";
+            setPreviewState('plier_image', 'plier_video', true);
           }
 
           function plier_stop() {
-            document.getElementById('plier_image').style.opacity = "0";
+            setPreviewState('plier_image', 'plier_video', false);
           }
           plier_stop()
         </script>
@@ -611,11 +610,93 @@ manageable distribution before executing the actual task.
     </div>
 </body>
   <script>
+    function ensurePreviewVideoLoaded(videoEl) {
+      if (!videoEl) return;
+      const sourceEl = videoEl.querySelector('source[data-src]');
+      if (sourceEl && !sourceEl.getAttribute('src')) {
+        sourceEl.setAttribute('src', sourceEl.getAttribute('data-src'));
+        videoEl.load();
+      }
+    }
+
+    function setPreviewState(imageId, videoId, shouldShow) {
+      const imageLayer = document.getElementById(imageId);
+      const videoEl = document.getElementById(videoId);
+      if (!imageLayer) return;
+
+      imageLayer.style.opacity = shouldShow ? '1' : '0';
+      if (!videoEl) return;
+
+      if (shouldShow) {
+        ensurePreviewVideoLoaded(videoEl);
+        const playPromise = videoEl.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+          playPromise.catch(() => {});
+        }
+      } else {
+        videoEl.pause();
+      }
+    }
+
+    function enableMobileTapPreviews() {
+      const previewItems = [
+        { rowSelector: "tr[onmouseover='MEMO_start()']", imageId: 'memo_image', videoId: 'memo_video' },
+        { rowSelector: "tr[onmouseover='LMP_start()']", imageId: 'lmp_image', videoId: 'lmp_video' },
+        { rowSelector: "tr[onmouseover='ReSET_start()']", imageId: 'reset_image', videoId: 'reset_video' },
+        { rowSelector: "tr[onmouseover='civil_start()']", imageId: 'civil_image', videoId: 'civil_video' },
+        { rowSelector: "tr[onmouseover='hudor_start()']", imageId: 'hudor_image', videoId: 'hudor_video' },
+        { rowSelector: "tr[onmouseover='teach_start()']", imageId: 'teach_image', videoId: 'teach_video' },
+        { rowSelector: "tr[onmouseover='plier_start()']", imageId: 'plier_image', videoId: 'plier_video' }
+      ];
+
+      function stopAllPreviews() {
+        previewItems.forEach(({ imageId, videoId }) => {
+          const imageLayer = document.getElementById(imageId);
+          if (imageLayer) {
+            imageLayer.style.display = 'none';
+            imageLayer.style.opacity = '0';
+          }
+          const videoEl = document.getElementById(videoId);
+          if (videoEl) {
+            videoEl.pause();
+          }
+        });
+      }
+
+      previewItems.forEach(({ rowSelector, imageId, videoId }) => {
+        const row = document.querySelector(rowSelector);
+        if (!row) return;
+
+        row.addEventListener('click', (event) => {
+          // Keep links tappable on mobile.
+          if (event.target && event.target.closest && event.target.closest('a')) {
+            return;
+          }
+
+          const imageLayer = document.getElementById(imageId);
+          if (!imageLayer) return;
+
+          const isAlreadyOpen = imageLayer.style.display !== 'none' && imageLayer.style.opacity === '1';
+          if (isAlreadyOpen) {
+            setPreviewState(imageId, videoId, false);
+            imageLayer.style.display = 'none';
+            return;
+          }
+
+          stopAllPreviews();
+          imageLayer.style.display = 'block';
+          setPreviewState(imageId, videoId, true);
+        });
+      });
+    }
+
     (function () {
       const STORAGE_KEY = 'site-theme';
       const btn = document.getElementById('theme-toggle');
       const icon = btn ? btn.querySelector('.theme-toggle-icon') : null;
       const media = window.matchMedia('(prefers-color-scheme: dark)');
+      // Treat only true touch-first devices as mobile interaction mode.
+      const isMobileLike = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
 
       function applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
@@ -651,6 +732,48 @@ manageable distribution before executing the actual task.
           applyTheme(getPreferredTheme());
         }
       });
+
+      // Avoid loading heavy social embeds on phones.
+      function loadSocialWidgets() {
+        if (isMobileLike) return;
+
+        const linkedinScript = document.createElement('script');
+        linkedinScript.src = 'https://platform.linkedin.com/badges/js/profile.js';
+        linkedinScript.async = true;
+        linkedinScript.defer = true;
+        linkedinScript.type = 'text/javascript';
+        document.head.appendChild(linkedinScript);
+
+        const twitterScript = document.createElement('script');
+        twitterScript.src = 'https://platform.twitter.com/widgets.js';
+        twitterScript.async = true;
+        twitterScript.charset = 'utf-8';
+        document.head.appendChild(twitterScript);
+      }
+
+      if ('requestIdleCallback' in window) {
+        window.requestIdleCallback(loadSocialWidgets, { timeout: 3000 });
+      } else {
+        window.setTimeout(loadSocialWidgets, 1200);
+      }
+
+      // Keep first screen sharp, defer publication thumbnail decodes.
+      document.querySelectorAll('.paper-thumb-td img').forEach((imgEl) => {
+        if (!imgEl.hasAttribute('loading')) imgEl.setAttribute('loading', 'lazy');
+        if (!imgEl.hasAttribute('decoding')) imgEl.setAttribute('decoding', 'async');
+      });
+
+      if (isMobileLike) {
+        document.querySelectorAll('.paper-thumb-td .two').forEach((previewLayer) => {
+          previewLayer.style.display = 'none';
+        });
+        enableMobileTapPreviews();
+      } else {
+        // Desktop: eagerly attach sources so hover playback is reliable.
+        document.querySelectorAll('.js-preview-video').forEach((videoEl) => {
+          ensurePreviewVideoLoaded(videoEl);
+        });
+      }
     })();
   </script>
 </html>

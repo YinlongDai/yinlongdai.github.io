@@ -527,4 +527,16 @@ html[data-theme="dark"] .theme-toggle {
 
 @media (max-width: 1000px) {
   .theme-toggle { right: 16px; }
+
+  /* Reduce GPU-heavy effects on phones/tablets. */
+  .ambient-bg::before,
+  .ambient-bg::after {
+    display: none;
+  }
+
+  .theme-toggle {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  }
 }
