@@ -300,9 +300,64 @@ body {
 
 
 .mediatitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.paper-venue {
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+  font-size: 1.0em;
+  color: #555;
+  letter-spacing: 0.5px;
+  font-style: italic;
+  font-synthesis: none;
+}
+
+.paper-resource {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
+  margin: 0 0.12em;
+  padding: 0.22em 0.65em 0.24em;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 0.78em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.paper-resource::after {
+  content: ' >';
+  font-size: 0.9em;
+  opacity: 0.7;
+}
+
+.paper-resource-code {
+  color: #16756b;
+  background: rgba(22, 117, 107, 0.08);
+}
+
+.paper-resource-arxiv {
+  color: #b45f06;
+  background: rgba(180, 95, 6, 0.08);
+}
+
+.paper-resource-pdf {
+  color: #a13b45;
+  background: rgba(161, 59, 69, 0.08);
+}
+
+.paper-resource:hover,
+.paper-resource:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  text-decoration: none;
 }
 
 /* Intro card next to profile photo */
@@ -358,9 +413,10 @@ body {
 }
 
 .papertitle {
-  font-family: 'Noto Sans', Verdana, Helvetica, sans-serif;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 17px;
   font-weight: 700;
+  font-synthesis: none;
 }
 
 .booktitle {
@@ -401,7 +457,7 @@ body {
 
 .paper-text-td {
   width: 100%;
-  vertical-align: top;
+  vertical-align: middle;
   padding: 22px 35px 22px 30px;
 }
 
@@ -409,6 +465,11 @@ body {
 .paper-thumb-td .two {
   width: 250px !important;
   height: 141px !important;
+}
+
+.paper-thumb-td .one {
+  margin-top: 0 !important;
+  transform: translateY(-6px);
 }
 
 .paper-thumb-td .two {
@@ -510,6 +571,25 @@ html[data-theme="dark"] .booktitle,
 html[data-theme="dark"] .name,
 html[data-theme="dark"] .mediatitle {
   color: rgba(255, 255, 255, 0.90);
+}
+
+html[data-theme="dark"] .paper-venue {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="dark"] .paper-resource-code {
+  color: #74d3c5;
+  background: rgba(116, 211, 197, 0.10);
+}
+
+html[data-theme="dark"] .paper-resource-arxiv {
+  color: #ffc36b;
+  background: rgba(255, 195, 107, 0.10);
+}
+
+html[data-theme="dark"] .paper-resource-pdf {
+  color: #ff9ca5;
+  background: rgba(255, 156, 165, 0.10);
 }
 
 html[data-theme="dark"] .logs-title-icon { opacity: 0.50; }
