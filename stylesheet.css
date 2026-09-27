@@ -352,6 +352,11 @@ body {
   box-shadow: none;
 }
 
+.paper-resource-website {
+  color: #2463a6;
+  background: rgba(36, 99, 166, 0.08);
+}
+
 .paper-resource-code {
   color: #16756b;
   background: rgba(22, 117, 107, 0.08);
@@ -629,6 +634,11 @@ html[data-theme="dark"] .mediatitle {
 
 html[data-theme="dark"] .paper-venue {
   color: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="dark"] .paper-resource-website {
+  color: #8fc3ff;
+  background: rgba(143, 195, 255, 0.10);
 }
 
 html[data-theme="dark"] .paper-resource-code {
