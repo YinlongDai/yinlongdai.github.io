@@ -153,18 +153,105 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2><img src="images/favicon/research.ico" width=60 height=60 alt="Research Icon" style="vertical-align:middle; margin-right:5px;">&nbsp;Research</h2>
+                <h2 id="research-heading"><img src="images/favicon/research.ico" width=60 height=60 alt="Research Icon" style="vertical-align:middle; margin-right:5px;">&nbsp;Research</h2>
                 <p>
                   I'm interested in robotics, computer vision and imitation learning. I work at the intersection of Machine learning and Robotics.
                 </p>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <div class="research-scroll" role="region" aria-labelledby="research-heading" tabindex="0">
+          <table class="research-papers" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+    <tr data-preview="caster" onmouseout="setPreviewState('caster_image', 'caster_video', false)" onmouseover="setPreviewState('caster_image', 'caster_video', true)">
+      <td class="paper-thumb-td">
+        <div class="one">
+          <div class="two" id="caster_image" style="opacity: 0; background: #000;">
+            <video id="caster_video" class="js-preview-video" muted loop playsinline preload="none" style="object-fit: contain;">
+              <source data-src="images/CASTER.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <img src="images/CASTER.jpg" alt="Video preview for CASTER: Formalizing zero-shot manipulation from synthetic videos as constrained optimization" width="250" height="141" style="border-radius: 15px; object-fit: contain; background: #000;">
+        </div>
+      </td>
+      <td class="paper-text-td">
+        <a href="https://vidgenrobotics2026.github.io"><span class="papertitle">CASTER: Formalizing zero-shot manipulation from synthetic videos as constrained optimization</span></a>
+        <br>
+        <strong>Yinlong Dai</strong>, <a href="https://homangab.github.io/">Homanga Bharadhwaj</a>, <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+        <br>
+        <em class="paper-venue">Under Review, 2026</em>
+        <p><span class="paper-resource paper-resource-soon">Coming soon</span></p>
+      </td>
+    </tr>
+
+    <tr data-preview="grasptwin" onmouseout="setPreviewState('grasptwin_image', 'grasptwin_video', false)" onmouseover="setPreviewState('grasptwin_image', 'grasptwin_video', true)">
+      <td class="paper-thumb-td">
+        <div class="one" style="overflow: hidden; border-radius: 15px;">
+          <div class="two" id="grasptwin_image" style="opacity: 0; background: #000; z-index: 1;">
+            <video id="grasptwin_video" class="js-preview-video" muted loop playsinline preload="none" style="object-fit: cover; transform: scale(1.1);">
+              <source data-src="images/GraspTwin.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <img src="images/GraspTwin.jpg" alt="Video preview for GraspTwin: Zero-shot task-oriented grasp optimization via a digital twin" width="250" height="141" style="border-radius: 15px; object-fit: cover; background: #000; transform: scale(1.1);">
+        </div>
+      </td>
+      <td class="paper-text-td">
+        <span class="papertitle">GraspTwin: Zero-shot task-oriented grasp optimization via a digital twin</span>
+        <br>
+        <a href="https://linkedin.com/in/daniel-evans-787b7a293">Daniel J. Evans</a>, <strong>Yinlong Dai</strong>, <a href="https://simonstepputtis.com/">Simon Stepputtis</a>, <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+        <br>
+        <em class="paper-venue">Under Review, 2026</em>
+        <p><span class="paper-resource paper-resource-soon">Coming soon</span></p>
+      </td>
+    </tr>
+
+    <tr data-preview="fov" onmouseout="setPreviewState('fov_image', 'fov_video', false)" onmouseover="setPreviewState('fov_image', 'fov_video', true)">
+      <td class="paper-thumb-td">
+        <div class="one">
+          <div class="two" id="fov_image" style="opacity: 0; background: #000;">
+            <video id="fov_video" class="js-preview-video" muted loop playsinline preload="none" style="object-fit: contain;">
+              <source data-src="images/FOV.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <img src="images/FOV.jpg" alt="Video preview for In view or out of view? A vision-aware filter that infers and reacts to the human&#x27;s field of view" width="250" height="141" style="border-radius: 15px; object-fit: contain; background: #000;">
+        </div>
+      </td>
+      <td class="paper-text-td">
+        <span class="papertitle">In view or out of view? A vision-aware filter that infers and reacts to the human&#x27;s field of view</span>
+        <br>
+        Mengxue Fu, Ya-Chuan Hsu, <strong>Yinlong Dai</strong>, <a href="https://ebiyik.github.io/">Erdem Bıyık</a>, <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+        <br>
+        <em class="paper-venue">Under Review, 2026</em>
+        <p><span class="paper-resource paper-resource-soon">Coming soon</span></p>
+      </td>
+    </tr>
+
+    <tr data-preview="ssa" onmouseout="setPreviewState('ssa_image', 'ssa_video', false)" onmouseover="setPreviewState('ssa_image', 'ssa_video', true)">
+      <td class="paper-thumb-td">
+        <div class="one">
+          <div class="two" id="ssa_image" style="opacity: 0; background: #000;">
+            <video id="ssa_video" class="js-preview-video" muted loop playsinline preload="none" style="object-fit: cover;">
+              <source data-src="images/SSA.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <img src="images/SSA.jpg" alt="Video preview for Assisting for open-ended tasks: Goal-oriented shared autonomy as a particle filter" width="250" height="141" style="border-radius: 15px; object-fit: cover; background: #000;">
+        </div>
+      </td>
+      <td class="paper-text-td">
+        <span class="papertitle">Assisting for open-ended tasks: Goal-oriented shared autonomy as a particle filter</span>
+        <br>
+        Mengxue Fu, Ethan Xu, Sam Iyer-Singh, <strong>Yinlong Dai</strong>, <a href="https://www.hageneaux.com/">Michael Hagenow</a>, <a href="https://dylanlosey.com/">Dylan P. Losey</a>
+        <br>
+        <em class="paper-venue">Under Review, 2026</em>
+        <p><span class="paper-resource paper-resource-soon">Coming soon</span></p>
+      </td>
+    </tr>
 
         <tr onmouseout="MEMO_stop()" onmouseover="MEMO_start()">
       <td class="paper-thumb-td">
@@ -531,6 +618,7 @@ manageable distribution before executing the actual task.
       </td>
     </tr>
           </tbody></table>
+          </div>
 
           
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
@@ -647,8 +735,49 @@ manageable distribution before executing the actual task.
       }
     }
 
+    function sizeResearchScroll() {
+      const viewport = document.querySelector('.research-scroll');
+      const table = viewport ? viewport.querySelector('.research-papers') : null;
+      if (!table) return;
+
+      function updateHeight() {
+        const rows = Array.from(table.tBodies[0].rows).slice(0, 5);
+        const height = rows.reduce((total, row) => total + row.getBoundingClientRect().height, 0);
+        if (height > 0) viewport.style.setProperty('--research-list-height', `${height}px`);
+      }
+
+      updateHeight();
+      if ('ResizeObserver' in window) {
+        const observer = new ResizeObserver(updateHeight);
+        observer.observe(table);
+      } else {
+        window.addEventListener('resize', updateHeight);
+      }
+    }
+
+    function linkPaperPreviews() {
+      document.querySelectorAll('td.paper-text-td').forEach((textCell) => {
+        const title = textCell.querySelector('.papertitle');
+        const titleLink = title ? title.closest('a[href]') : null;
+        const row = textCell.closest('tr');
+        const preview = row ? row.querySelector('.paper-thumb-td .one') : null;
+        if (!titleLink || !preview || preview.closest('a')) return;
+
+        const previewLink = document.createElement('a');
+        previewLink.href = titleLink.href;
+        previewLink.className = 'paper-preview-link';
+        previewLink.setAttribute('aria-label', title.textContent.trim());
+        preview.parentNode.insertBefore(previewLink, preview);
+        previewLink.appendChild(preview);
+      });
+    }
+
     function enableMobileTapPreviews() {
       const previewItems = [
+        { rowSelector: 'tr[data-preview="caster"]', imageId: 'caster_image', videoId: 'caster_video' },
+        { rowSelector: 'tr[data-preview="ssa"]', imageId: 'ssa_image', videoId: 'ssa_video' },
+        { rowSelector: 'tr[data-preview="grasptwin"]', imageId: 'grasptwin_image', videoId: 'grasptwin_video' },
+        { rowSelector: 'tr[data-preview="fov"]', imageId: 'fov_image', videoId: 'fov_video' },
         { rowSelector: "tr[onmouseover='MEMO_start()']", imageId: 'memo_image', videoId: 'memo_video' },
         { rowSelector: "tr[onmouseover='LMP_start()']", imageId: 'lmp_image', videoId: 'lmp_video' },
         { rowSelector: "tr[onmouseover='ReSET_start()']", imageId: 'reset_image', videoId: 'reset_video' },
@@ -771,6 +900,9 @@ manageable distribution before executing the actual task.
         if (!imgEl.hasAttribute('loading')) imgEl.setAttribute('loading', 'lazy');
         if (!imgEl.hasAttribute('decoding')) imgEl.setAttribute('decoding', 'async');
       });
+
+      linkPaperPreviews();
+      sizeResearchScroll();
 
       if (isMobileLike) {
         document.querySelectorAll('.paper-thumb-td .two').forEach((previewLayer) => {
