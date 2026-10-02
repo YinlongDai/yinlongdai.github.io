@@ -549,6 +549,24 @@ body {
   display: block;
 }
 
+.fov-preview-labels {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  color: #9b4f00;
+  font: 700 9px/1 'Lato', Verdana, sans-serif;
+  letter-spacing: .08em;
+  text-align: center;
+}
+
+.fov-preview-labels span {
+  width: 45%;
+}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;

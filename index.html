@@ -22,7 +22,7 @@
     <meta name="author" content="Dai Yinlong">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/wrench-screwdriver-icon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=462d0130809b">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css?v=fov-icons-20261002">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     
   </head>
@@ -212,13 +212,14 @@
     <tr data-preview="fov" onmouseout="setPreviewState('fov_image', 'fov_video', false)" onmouseover="setPreviewState('fov_image', 'fov_video', true)">
       <td class="paper-thumb-td">
         <div class="one">
-          <div class="two" id="fov_image" style="opacity: 0; background: #000;">
-            <video id="fov_video" class="js-preview-video" muted loop playsinline preload="none" style="object-fit: contain;">
-              <source data-src="images/FOV.mp4" type="video/mp4">
+          <div class="two" id="fov_image" style="opacity: 0; background: #fff;">
+            <video id="fov_video" class="js-preview-video" muted loop playsinline preload="none" poster="images/FOV.jpg?v=3d-mesh">
+              <source data-src="images/FOV.mp4?v=3d-mesh" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
-          <img src="images/FOV.jpg" alt="Video preview for In View or Out of View? A Vision-Aware Filter that Infers and Reacts to the Human&#x27;s Field of View" width="250" height="141" style="border-radius: 15px; object-fit: contain; background: #000;">
+          <img src="images/FOV.jpg?v=3d-mesh" alt="Seen and unseen robot actions compared in In View or Out of View?" width="250" height="141" style="border-radius: 15px;">
+          <div class="fov-preview-labels" aria-hidden="true"><span>UNSEEN</span><span>SEEN</span></div>
         </div>
       </td>
       <td class="paper-text-td">
